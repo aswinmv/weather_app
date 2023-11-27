@@ -4,13 +4,11 @@ Weather app made with Flutter, using the OpenWeatherMap API for data and the Pro
 # Flutter Weather App
 
 
-<p style="color: #3498db; font-size: 1.2em; font-weight: bold;">
+<p style=" color: 3498db; font-size: 1.2em; font-weight: bold;">
   🌈 A sophisticated Flutter weather application that seamlessly retrieves real-time weather 
   data from the OpenWeatherMap API, enhanced with a robust state management system courtesy of the Provider package.
 </p>
 
-
-Feel free to adjust the color, font size, and other styles to match your preferences.
 
 <p align="center">
   <img src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" alt="OpenWeatherMap Logo" width="200">
