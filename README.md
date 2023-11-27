@@ -5,6 +5,12 @@ Weather app made with Flutter, using the OpenWeatherMap API for data and the Pro
 
 A simple weather app built with Flutter that fetches weather data from the OpenWeatherMap API and uses the Provider package for state management.
 
+<p align="center">
+  <img src="https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" alt="OpenWeatherMap Logo" width="200">
+</p>
+
+
+
 ## Features
 
 - Display current weather conditions
