@@ -1,16 +1,82 @@
-# weatherapp
+Weather app made with Flutter, using the OpenWeatherMap API for data and the Provider package for state management.
 
-A new Flutter project.
+
+# Flutter Weather App
+
+A simple weather app built with Flutter that fetches weather data from the OpenWeatherMap API and uses the Provider package for state management.
+
+## Features
+
+- Display current weather conditions
+- 5-day weather forecast
+- User-friendly interface
+- State management with Provider
+- Sleek minimal UI
+
+## Screenshots
+
+Include screenshots or GIFs of your app in action.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+Before running the app, make sure you have Flutter installed on your machine. If not,
+follow the [official Flutter installation guide](https://flutter.dev/docs/get-started/install).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository:
+
+```bash
+git clone https://github.com/aswinmv/weather_app
+.git
+```
+
+2. Change into the project directory:
+
+```bash
+cd weather_app
+```
+
+3. Get dependencies:
+
+```bash
+flutter pub get http
+flutter pub get provider
+```
+
+4. Run the app:
+
+```bash
+flutter run
+```
+
+## Configuration
+
+To use this app, you need to obtain an API key from OpenWeatherMap. Once you have the key, 
+update the `lib/utils/api_key.dart` file with your API key:
+
+```dart
+// lib/utils/api_key.dart
+
+class ApiKey {
+  static const String openWeatherMap = 'YOUR_API_KEY';
+}
+```
+
+## Dependencies
+
+- [flutter](https://flutter.dev/)
+- [provider](https://pub.dev/packages/provider)
+- [http](https://pub.dev/packages/http) (for making API requests)
+- [here](https://openweathermap.org/api) (openweathermap api)
+
+## API
+
+This app uses the OpenWeatherMap API for weather data. You can sign up for a free API key [here](https://openweathermap.org/api).
+
+## Contributing
+
+If you find any issues or have suggestions for improvements, feel free to open an issue or create a pull request.
+
