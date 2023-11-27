@@ -25,6 +25,12 @@ Weather app made with Flutter, using the OpenWeatherMap API for data and the Pro
 - Sleek minimal UI
 
 ## Screenshots
+
+![image](https://github.com/aswinmv/weather_app/assets/65582177/a403d9f8-668c-4c82-bd16-5d6409e117e1)
+
+
+
+
 ![image](https://github.com/aswinmv/weather_app/assets/65582177/5dad4821-ccd9-4a5f-836f-f02dfca416c3)
 
 
