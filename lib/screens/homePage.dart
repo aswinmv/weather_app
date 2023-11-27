@@ -55,8 +55,8 @@ class _HomePageState extends State<HomePage> {
     final scafoldkey = GlobalKey<ScaffoldState>();
     // final forecast = Provider.of<ForecastApi>(context, listen: true);
     return Scaffold(
-      key: scafoldkey,
-      drawer: const drawer(),
+      // key: scafoldkey,
+      // drawer: const drawer(),
       body: Consumer<Weatherapi>(
         builder: (context, value, child) {
           /// Sunrise
@@ -282,7 +282,7 @@ class _HomePageState extends State<HomePage> {
                               ],
                             ),
                           ),
-                          // ///////////////////////////////////////////////////////////////////////////////////////////////////////
+                          // 5 day forecast///////////////////////////////////////
                           Align(
                             alignment: Alignment.bottomLeft,
                             child: Padding(
@@ -303,10 +303,17 @@ class _HomePageState extends State<HomePage> {
                                   )
                                 : ListView.builder(
                                     scrollDirection: Axis.horizontal,
-                                    itemCount: 10,
+                                    itemCount: 5,
                                     // value.forecastData!.list.length,
 
                                     itemBuilder: (context, index) {
+                                      List time = [
+                                        "9.00",
+                                        "11.00",
+                                        "1.00",
+                                        "3.00",
+                                        "5.00"
+                                      ];
                                       return Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Container(
@@ -328,8 +335,19 @@ class _HomePageState extends State<HomePage> {
                                           child: Column(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.spaceEvenly,
+                                              // /////////////////////////////////////////////////////////////////
                                               children: [
-                                                const Text("Time"),
+                                                // time/////////////////////////////////////////////////
+                                                Text(
+                                                  time[index].toString(),
+                                                  style: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      fontSize: 15,
+                                                      color:
+                                                          const Color.fromARGB(
+                                                              255, 6, 42, 71)),
+                                                ),
                                                 SizedBox(
                                                     height:
                                                         MediaQuery.of(context)
@@ -365,137 +383,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                 );
         },
-      ),
-    );
-  }
-}
-// drawer////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-class drawer extends StatelessWidget {
-  const drawer({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    var myDrawerColor = const Color.fromARGB(255, 255, 255, 255);
-    var myDrawerText =
-        GoogleFonts.poppins(fontSize: 18, fontWeight: FontWeight.w500);
-    return Drawer(
-      backgroundColor: const Color(0xff41C9D7),
-      child: Column(
-        children: [
-          const SizedBox(
-            height: 250,
-          ),
-          Row(
-            children: [
-              const SizedBox(
-                width: 40,
-              ),
-              Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(25)),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Column(
-                children: [
-                  Text(
-                    "Anika Tasnim",
-                    style: myDrawerText,
-                  ),
-                  Text(
-                    "anikatasnim00@gmail.com",
-                    style: GoogleFonts.poppins(),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Row(
-            children: [
-              const SizedBox(
-                width: 40,
-              ),
-              Icon(
-                Icons.search,
-                color: myDrawerColor,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Text(
-                "Find City",
-                style: myDrawerText,
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Row(
-            children: [
-              const SizedBox(
-                width: 40,
-              ),
-              Icon(
-                Icons.location_on_outlined,
-                color: myDrawerColor,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Text("Map", style: myDrawerText),
-            ],
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Row(
-            children: [
-              const SizedBox(
-                width: 40,
-              ),
-              Icon(
-                Icons.settings_outlined,
-                color: myDrawerColor,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Text("Settings", style: myDrawerText),
-            ],
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Row(
-            children: [
-              const SizedBox(
-                width: 40,
-              ),
-              Icon(
-                Icons.list_alt_rounded,
-                color: myDrawerColor,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Text("Weather Newa", style: myDrawerText),
-            ],
-          ),
-          // const SizedBox(
-          //   width: 20,
-          // ),
-        ],
       ),
     );
   }

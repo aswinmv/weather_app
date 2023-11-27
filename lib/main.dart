@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:weatherapp/api/weatherapi.dart';
+import 'package:weatherapp/screens/homePage.dart';
 
 import 'package:weatherapp/screens/navigation.dart';
 
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Navigation(),
+      home: const HomePage(),
     );
   }
 }

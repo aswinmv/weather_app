@@ -17,7 +17,7 @@ class _NavigationState extends State<Navigation> {
   @override
   Widget build(BuildContext context) {
     return PersistentTabView(
-      backgroundColor: Color(0xff2E4C70),
+      backgroundColor: const Color(0xff2E4C70),
       context,
       controller: controller,
       navBarStyle: NavBarStyle.style12,
