@@ -35,7 +35,6 @@ Weather app made with Flutter, using the OpenWeatherMap API for data and the Pro
 
 
 
-Include screenshots or GIFs of your app in action.
 
 ## Getting Started
 
